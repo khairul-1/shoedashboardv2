@@ -112,7 +112,7 @@
 const mongoose = require('mongoose');
 const { port, config } = require('./apps/config/index.js');
 
-const port = config.port || 3000;
+const port2 = config.port || 3000;
 
 async function startServer() {
   try {
@@ -126,8 +126,8 @@ async function startServer() {
 
     // Rest of your server startup code
 
-    app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
+    app.listen(port2, () => {
+      console.log(`Server is running on port ${port2}`);
     });
   } catch (error) {
     console.error('Error starting server:', error);
