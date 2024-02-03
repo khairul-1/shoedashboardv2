@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node ./src/server.js",
-    "build": "copyfiles -u 1 src/**/* dist/",
+    "build": "copyfiles -u 1 ./src/**/* dist/",
     "production": "node ./dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --ignore-path .gitignore --write \"./src/**/*.+(js|ts|json)\""
