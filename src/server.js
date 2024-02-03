@@ -82,11 +82,11 @@
 
 // module.exports = app;
 
-import { listen } from './app';
-import { port as _port, database_url } from './apps/config/index';
-import { connect } from 'mongoose';
+const app = require('./app.js');
+const config = require('./apps/config/index.js');
+const mongoose = require('mongoose');
 
-const port = _port || 3000;
+const port = config.port || 3000;
 
 async function startServer() {
   try {
@@ -96,10 +96,10 @@ async function startServer() {
     //   useCreateIndex: true,
     //   useFindAndModify: false,
     // });
-    await connect(database_url);
+    await mongoose.connect(config.database_url);
     console.log('Connected to MongoDB');
 
-    listen(port, () => {
+    app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });
   } catch (error) {

@@ -1,0 +1,2 @@
+{"rootDir": "./src",
+ "outDir": "./dist"}
