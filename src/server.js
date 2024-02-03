@@ -110,7 +110,7 @@
 // startServer();
 
 const mongoose = require('mongoose');
-const { config } = require('./apps/config/index.js');
+const { port, config } = require('./apps/config/index.js');
 
 const port = config.port || 3000;
 
