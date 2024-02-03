@@ -1,11 +1,11 @@
 {
   "name": "serverside",
   "version": "1.0.0",
-  "description": "",
+  "description": "# Mongoose,MongodB used",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "build": "tsc",
+    "build": "mkdir dist && cp -r src/* dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --ignore-path .gitignore --write \"./src/**/*.+(js|ts|json)\""
   },
@@ -23,6 +23,7 @@
     "mongose": "^0.0.2-security"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.33.2",
