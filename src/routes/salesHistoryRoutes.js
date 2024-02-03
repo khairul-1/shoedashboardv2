@@ -101,7 +101,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Sale = require('../models/Sale');
+const Sale = require('../models/sale.js');
 
 const config = require('../apps/config');
 const jwt = require('jsonwebtoken');
