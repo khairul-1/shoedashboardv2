@@ -81,53 +81,29 @@
 // });
 
 // module.exports = app;
-//=======================================================
-// const app = require('./app.js');
-// const config = require('./apps/config/index.js');
-// const mongoose = require('mongoose');
 
-// const port = config.port || 3000;
+const dotenv = require('dotenv');
 
-// async function startServer() {
-//   try {
-//     // await mongoose.connect(config.database_url, {
-//     //   useNewUrlParser: true,
-//     //   useUnifiedTopology: true,
-//     //   useCreateIndex: true,
-//     //   useFindAndModify: false,
-//     // });
-//     await mongoose.connect(config.database_url);
-//     console.log('Connected to MongoDB');
-
-//     app.listen(port, () => {
-//       console.log(`Server is running on port ${port}`);
-//     });
-//   } catch (error) {
-//     console.error('Error starting server:', error);
-//   }
-// }
-
-// startServer();
-
+const app = require('./app.js');
+const config = require('./apps/config/index.js');
+const port2 = require('./apps/config/index.js');
 const mongoose = require('mongoose');
-const { port, config } = require('./apps/config/index.js');
 
-const port2 = config.port || 3000;
+const port3 = config.port2 || 3000;
 
 async function startServer() {
   try {
-    await mongoose.connect(config.database_url, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
-    });
+    // await mongoose.connect(config.database_url, {
+    //   useNewUrlParser: true,
+    //   useUnifiedTopology: true,
+    //   useCreateIndex: true,
+    //   useFindAndModify: false,
+    // });
+    await mongoose.connect(config.database_url);
     console.log('Connected to MongoDB');
 
-    // Rest of your server startup code
-
-    app.listen(port2, () => {
-      console.log(`Server is running on port ${port2}`);
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port3}`);
     });
   } catch (error) {
     console.error('Error starting server:', error);
