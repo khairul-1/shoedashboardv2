@@ -1,33 +1,3 @@
-// // routes/salesRoutes.js
-// //import { Router } from 'express';
-// const Router = require('express');
-// const router = Router();
-// //import { create } from '../models/Sale';
-// const create = require('../models/Sale');
-// // Sell a product
-// router.post('/sell', async (req, res) => {
-//   try {
-//     const sale = await create(req.body);
-//     res.status(201).json({ sale });
-//   } catch (err) {
-//     res.status(400).json({ error: err.message });
-//   }
-// });
-
-// // Update inventory after sale
-// router.put('/updateInventory/:productId', async (req, res) => {
-//   try {
-//     const { productId } = req.params;
-//     // Update inventory logic here
-//     res.json({ message: 'Inventory updated successfully' });
-//   } catch (err) {
-//     res.status(400).json({ error: err.message });
-//   }
-// });
-
-// //export default router;
-// module.exports = router;
-
 const express = require('express');
 const router = express.Router();
 const Sale = require('../models/sale');
