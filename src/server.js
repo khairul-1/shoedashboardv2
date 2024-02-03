@@ -81,23 +81,50 @@
 // });
 
 // module.exports = app;
+//=======================================================
+// const app = require('./app.js');
+// const config = require('./apps/config/index.js');
+// const mongoose = require('mongoose');
 
-const app = require('./app.js');
-const config = require('./apps/config/index.js');
+// const port = config.port || 3000;
+
+// async function startServer() {
+//   try {
+//     // await mongoose.connect(config.database_url, {
+//     //   useNewUrlParser: true,
+//     //   useUnifiedTopology: true,
+//     //   useCreateIndex: true,
+//     //   useFindAndModify: false,
+//     // });
+//     await mongoose.connect(config.database_url);
+//     console.log('Connected to MongoDB');
+
+//     app.listen(port, () => {
+//       console.log(`Server is running on port ${port}`);
+//     });
+//   } catch (error) {
+//     console.error('Error starting server:', error);
+//   }
+// }
+
+// startServer();
+
 const mongoose = require('mongoose');
+const { config } = require('./apps/config/index');
 
 const port = config.port || 3000;
 
 async function startServer() {
   try {
-    // await mongoose.connect(config.database_url, {
-    //   useNewUrlParser: true,
-    //   useUnifiedTopology: true,
-    //   useCreateIndex: true,
-    //   useFindAndModify: false,
-    // });
-    await mongoose.connect(config.database_url);
+    await mongoose.connect(config.database_url, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    });
     console.log('Connected to MongoDB');
+
+    // Rest of your server startup code
 
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
