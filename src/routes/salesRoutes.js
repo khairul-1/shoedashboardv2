@@ -30,7 +30,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Sale = require('../models/Sale');
+const Sale = require('../models/sale');
 const Product = require('../models/productDetails');
 
 const config = require('../apps/config');
