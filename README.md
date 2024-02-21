@@ -6,10 +6,16 @@
 
 ## Below Routes Used Here
 
-# Product routes
+---Product routes
 
-# Sales Routes
+---Sales Routes
 
-# Filter Routes
+---Filter Routes
 
-# Sales History Routes
+---Sales History Routes
+
+# Local Host link : http://localhost:3000/
+
+# Live Server link : https://maroon-prawn-toga.cyclic.app/
+
+# Live Web Link : https://sunny-cranachan-b22f56.netlify.app/
